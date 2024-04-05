@@ -25,6 +25,7 @@ urlpatterns = [
     # re_path(r'^$', views.home, name='home'),
     
     re_path(r'^boards/(?P<pk>\d+)/$', views.board_topics, name='board_topics'),
+    re_path(r'^boards/(?P<pk>\d+)/new/$', views.new_topic, name='new_topic'),
     re_path(r'^questions/(?P<pk>\d+)/$', views.question, name='question'),
     re_path(r'^posts/(?P<slug>[-\w]+)/$', views.post, name='post'),
     re_path(r'^blog/(?P<slug>[-\w]+)-(?P<pk>\d+)/$', views.blog_post, name='blog_post'),
