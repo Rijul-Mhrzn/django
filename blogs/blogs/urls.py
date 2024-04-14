@@ -21,6 +21,8 @@ from django.urls import include, re_path
 from boards import views
 from accounts import views as accounts_views
 
+from django.contrib.auth import views as auth_views
+
 urlpatterns = [
     path('', views.home, name='home'),
     re_path(r'^about/$', views.about, name='about'),
@@ -33,6 +35,8 @@ urlpatterns = [
     re_path(r'^blog/(?P<slug>[-\w]+)-(?P<pk>\d+)/$', views.blog_post, name='blog_post'),
     re_path(r'^profile/(?P<username>[-\w]+)/$', views.user_profile, name='user_profile'),
     re_path(r'^articles/(?P<year>[0-9]{4})/$', views.year_archive, name='year'),
+    re_path(r'^logout/$', auth_views.LogoutView.as_view(), name='logout'),
+
 
 
     path('admin/', admin.site.urls),
