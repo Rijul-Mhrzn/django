@@ -36,6 +36,8 @@ urlpatterns = [
     re_path(r'^profile/(?P<username>[-\w]+)/$', views.user_profile, name='user_profile'),
     re_path(r'^articles/(?P<year>[0-9]{4})/$', views.year_archive, name='year'),
     re_path(r'^logout/$', auth_views.LogoutView.as_view(), name='logout'),
+    re_path(r'^login/$', auth_views.LoginView.as_view(template_name='login.html'), name='login'),
+
 
 
 

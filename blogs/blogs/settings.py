@@ -76,6 +76,7 @@ TEMPLATES = [
 WSGI_APPLICATION = 'blogs.wsgi.application'
 
 LOGOUT_REDIRECT_URL = 'home'
+LOGIN_REDIRECT_URL = 'home'
 
 
 # Database

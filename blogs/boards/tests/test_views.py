@@ -1,9 +1,10 @@
 from django.urls import reverse, resolve
 from django.test import TestCase
-from .views import home, board_topics, new_topic
-from. models import Board, Topic, Post
 from django.contrib.auth.models import User
-from .forms import NewTopicForm
+
+from ..views import home, board_topics, new_topic
+from ..models import Board, Topic, Post
+from ..forms import NewTopicForm
 
 class HomeTests(TestCase):
     def setUp(self):
@@ -150,19 +151,3 @@ class NewTopicTests(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertTrue(form.errors)
 
-
-
-
-
-    
-
-    
-
-
-
-
-
-
-
-
-# Create your tests here.
