@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'boards',
     'accounts',
     'django.contrib.humanize',
+    'rest_framework',  
+    'sample_api',
 ]
 
 MIDDLEWARE = [
