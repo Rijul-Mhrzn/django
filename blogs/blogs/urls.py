@@ -92,5 +92,6 @@ urlpatterns = [
 
     re_path(r'^settings/account/$', accounts_views.UserUpdateView.as_view(), name='my_account'),
     path('api/', include('sample_api.urls')),
+    path('api/', include('movie.urls')),
     
 ]
